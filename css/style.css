@@ -142,8 +142,8 @@ a {
     text-align: center;
 }
 
-.invisible2 {
-    /* display: none; /* НЕВИДИМЫЙ ОБЪЕКТ */
+.invisible {
+     display: none;
 }
 
 .btncomment {
@@ -181,6 +181,7 @@ a {
 .help-block {
     margin-top: 0;
     margin-bottom: 0;
+
 }
 
 .reg {
@@ -194,4 +195,14 @@ footer {
     padding: 10px 30px 1px 15px;
     margin: 13px 0 30px;
     color: #286090;
+}
+
+.error {
+    text-align: center;
+    margin-bottom: 10;
+    color: #9e2626;
+}
+
+.errorColor {
+    color: #9e2626;
 }

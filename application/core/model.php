@@ -1,7 +1,7 @@
 <?php
 class Model extends DB
 {
-    protected static $connect;     //  protected!
+    protected static $connect;
 
     public function __construct()
     {
@@ -15,9 +15,20 @@ class Model extends DB
             self::$connect = new PDO($dsn, $this->user, $this->pass, $opt);
         }
         return self::$connect;
+    }
 
-        //объект бд коннекта ??
-        //имя таблицы
+    public function clean($value = "") {
+        $value = trim($value);
+        $value = stripslashes($value);
+        $value = strip_tags($value);
+        $value = htmlspecialchars($value);
+
+        return $value;
+    }
+
+    public function check_length($value = "", $min, $max) {
+        $result = (mb_strlen($value) < $min || mb_strlen($value) > $max);
+        return !$result;
     }
 
     public function get_data()
