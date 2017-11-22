@@ -1,0 +1,197 @@
+body {
+    background: url('/images/bg2.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+h2 {
+    color: #286090;
+    padding-top: 11px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar {
+
+    min-height: 50px;
+    border: 2px solid transparent;
+    margin-bottom: 7px;
+}
+
+.navbar-inverse {
+    background-color: #008ab9;
+    color: #fff;
+    border-color: #008ab9;
+}
+
+.body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.navbar-brand {
+    color: #efefef;
+    font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f2f2f2;
+    font-size: 16px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #008ab9;
+}
+
+.page-header {
+    border-bottom: 2px solid #286090;
+    padding: 0 30px 1px 15px;
+    margin: 30px 0 10px;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    background-color: #f0f0f8;
+}
+
+.pagination {
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+.pager li > a, .pager li > span {
+    border-radius: 0;
+    margin: -10px 0;
+}
+
+h4 {
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: #008ab9;
+    border-color: #286090;
+    border-top-color: rgb(40,96,144);
+    border-right-color: rgb(40,96,144);
+    border-bottom-color: rgb(40,96,144);
+    border-left-color: rgb(40,96,144);
+    width: 150px;
+    padding: 3px 12px;
+}
+
+.home {
+    background-color: #f0f0f8;
+}
+
+a {
+    color: #fff;
+}
+
+.thumbnail {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #008ab9;
+    border-color: #ddd;
+}
+
+.message {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.leftstr, .rightstr {
+    float: left;
+    width: 50%;
+
+    background-color: #daf0fe;
+    font-size: 18px;
+    padding: 10px 30px 10px 20px;
+    color: #1c6399;
+    margin: 0 0 15px 0;
+}
+
+.rightstr {
+    text-align: right;
+    text-decoration: underline;
+}
+
+.msgOnPage {
+    width: 70px;
+}
+
+.numberPosts {
+    text-align: center;
+}
+
+.invisible2 {
+    /* display: none; /* НЕВИДИМЫЙ ОБЪЕКТ */
+}
+
+.btncomment {
+    text-align: right;
+}
+
+.control-label {
+    color: #1c6399;
+}
+
+.btnNewMessage {
+    text-align: center;
+}
+
+.optionsBtnNewMessage {
+    width: 220px;
+    padding: 10px;
+    margin: 5px 0 10px 16px;
+}
+
+.writeMessage {
+    padding: 30px 30px 10px;
+    margin-bottom: 20px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #286090;
+}
+
+.btnClose {
+    width: 120px;
+    margin: 5px 0 10px 30px;
+}
+
+.help-block {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.reg {
+    color: #286090;
+    font-size: 26px;
+    text-align: right;
+}
+
+footer {
+    border-top: 2px solid #286090;
+    padding: 10px 30px 1px 15px;
+    margin: 13px 0 30px;
+    color: #286090;
+}

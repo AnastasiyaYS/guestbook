@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - guestbook@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="guestbook">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="learning"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="news"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="php_mvc"/>
+    <table id="8" parent="1" name="messages"/>
+    <table id="9" parent="1" name="users"/>
+    <column id="10" parent="8" name="id_msg">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="11" parent="8" name="id_author">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="12" parent="8" name="datetimewriting">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="13" parent="8" name="message">
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <index id="14" parent="8" name="id_author">
+      <columns>id_author</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="15" parent="8" name="PRIMARY">
+      <columns>id_msg</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="16" parent="8" name="messages_ibfk_1">
+      <columns>id_author</columns>
+      <ref-key>~.users.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="17" parent="9" name="id_user">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="18" parent="9" name="firstname">
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="19" parent="9" name="lastname">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="20" parent="9" name="login">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="21" parent="9" name="email">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="22" parent="9" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="23" parent="9" name="gender">
+      <mandatory>1</mandatory>
+      <data-type>enum(&apos;man&apos;, &apos;woman&apos;)|0</data-type>
+      <default-expression>&apos;man&apos;</default-expression>
+    </column>
+    <column id="24" parent="9" name="user_status">
+      <mandatory>1</mandatory>
+      <data-type>enum(&apos;admin&apos;, &apos;user&apos;, &apos;guest&apos;)|0</data-type>
+      <default-expression>&apos;guest&apos;</default-expression>
+    </column>
+    <key id="25" parent="9" name="PRIMARY">
+      <columns>id_user</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
