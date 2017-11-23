@@ -7,6 +7,7 @@
         <br><br>
         <div class="form-group">
             <span id="helpBlock" class="error help-block input-sm <?php if (!$data1[0]) {echo 'invisible';} ?>"><?php echo "$data1[0]" ?></span>
+            <span id="helpBlock" class="error help-block input-sm <?php if (!$data1[3]) {echo 'invisible';} ?>"><?php echo "$data1[3]" ?></span>
             <label for="inputFirstName" class="col-sm-2 col-sm-offset-3 control-label">Имя:</label>
             <div class="col-sm-4">
                 <input type="text" class="form-control" id="inputFirstName" name="firstname" placeholder="Имя" value=<?php echo "$data2[1]" ?> >
@@ -80,7 +81,7 @@
         </div>
         -->
         <div>
-            <input type="hidden" name="reg" value="5">
+            <input type="hidden" name="reg" value="1">
         </div>
         <div class="form-group">
             <div class="col-sm-offset-5 col-sm-10">

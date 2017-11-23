@@ -4,7 +4,7 @@ class Model_users extends Model {
     /**
      *
      */
-    public function test(){
+    public function test($userpassword){
 
         $stmt = Model::$connect->query('SELECT `firstname` FROM `users`');
         while ($row = $stmt->fetch())
@@ -13,6 +13,7 @@ class Model_users extends Model {
         }
 
         $pass = 'admin'.$this->salt;
+        echo "$pass /n";
         $password = password_hash($pass, PASSWORD_DEFAULT);
 
         $stmt = Model::$connect->prepare('INSERT INTO `users` (`login`, `password`, `user_status`) VALUES (?, ?, ?)');
@@ -27,8 +28,34 @@ class Model_users extends Model {
         }
     }
 
-    public function authorization(){
+    public function authorization($login, $password){
 
+        $err = [];
+
+        $login = $this->clean($login);
+        $password = $this->clean($password);
+
+        if(!$this->check_length($login, 2, 30)) {
+            $err[1] = 'Длина вашего логина не может быть меньше 2 или более 30 символов';
+        };
+
+        if(!$this->check_length($password, 8, 30)) {
+            $err[2] = "Длина вашего пароля не может быть меньше 8 или более 30 символов";
+        }
+
+        if (sizeof($err) == 0) {
+            $stmt = Model::$connect->prepare("SELECT * FROM `users` WHERE `login` = ?");
+            $stmt->execute(array($login));
+            $user = $stmt->fetchAll();
+
+            if (!is_null($user) && password_verify($password . $this->salt, $user[0]['password'])) {
+                $_SESSION['user'] = $user;
+            } else {
+                $err[3] = "Неверный логин или пароль!";
+            }
+        }
+
+        return $err;
     }
 
     public function rememberEnteredValues ($var1, $var2, $var3, $var4, $var5){
@@ -44,6 +71,7 @@ class Model_users extends Model {
     }
 
     public function registration($firstname, $lastname, $login, $email, $password, $confirm_password, $gender){
+
         $err = [];
 
         if(empty($firstname) || empty($lastname) || empty($login) || empty($email) || empty($password) || empty($confirm_password)) {
@@ -68,7 +96,13 @@ class Model_users extends Model {
         if(!$this->check_length($login, 2, 30)) {
             $err[3] = "Логин должен содержать не менее 2 и не более 30 символов";
         };
-        $stmt = Model::$connect->query("SELECT `id_user` FROM `users` WHERE `login` LIKE '{$login}'");
+
+        $stmt = Model::$connect->prepare("SELECT * FROM `users` WHERE `login` = ?");
+        $stmt->execute(array($login));
+        $user = $stmt->fetchAll();
+
+        $stmt = Model::$connect->prepare("SELECT `id_user` FROM `users` WHERE `login` LIKE ?");
+        $stmt->execute(array($login));
         $stmt = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if (!empty($stmt)) {
             $err[4] = "Этот логин уже занят. Выберите другой";
@@ -95,7 +129,6 @@ class Model_users extends Model {
                 $err[7] = "Пароли не совпадают";
             }
         }
-
         return $err;
     }
 }
