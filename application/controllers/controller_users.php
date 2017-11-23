@@ -30,7 +30,7 @@ class Controller_users extends Controller
             $data2 = $this->model->rememberEnteredValues($_POST['firstname'], $_POST['lastname'], $_POST['login'], $_POST['email'], $_POST['optionsRadios']);
             if (sizeof($data1) == 0) {
 
-                $this->view->generate('view_profile.php');
+                $this->view->generate('view_successful_registration.php');
             } else {
                 $this->view->generate('view_registration.php', $data1, $data2);
             }
