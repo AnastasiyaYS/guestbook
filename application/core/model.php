@@ -31,8 +31,14 @@ class Model extends DB
         return !$result;
     }
 
-    public function get_data()
-    {
+    public static function get_username($id_auth){
+        $stmt = Model::$connect->prepare("SELECT `firstname`, `lastname` FROM `users` WHERE `id_user` = ?");
+        $stmt->execute(array($id_auth));
+
+        $username = $stmt->fetch(PDO::FETCH_ASSOC);
+        $username = $username['firstname']." ".$username['lastname'];
+
+        return $username;
     }
 
     // получить запись по id (и имя таблицы?)

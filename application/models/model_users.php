@@ -4,24 +4,14 @@ class Model_users extends Model {
     /**
      *
      */
-    public function test($userpassword){
-
-        $stmt = Model::$connect->query('SELECT `firstname` FROM `users`');
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC));
-        {
-            echo $row['firstname'] . "\n";
-        }
-
-        $pass = 'admin'.$this->salt;
-        echo "$pass /n";
+    public function create_admin(){
+        $pass = 'qwe1!QWE'.$this->salt;
         $password = password_hash($pass, PASSWORD_DEFAULT);
 
         $stmt = Model::$connect->prepare('INSERT INTO `users` (`login`, `password`, `user_status`) VALUES (?, ?, ?)');
         $stmt->execute(array('admin', $password, 'admin'));
 
-        echo $password;
-
-        if (password_verify('admin'.$this->salt, $password)) {
+        if (password_verify('qwe1!QWE'.$this->salt, $password)) {
             echo 'Пароль правильный!';
         } else {
             echo 'Пароль неправильный.';
@@ -36,11 +26,11 @@ class Model_users extends Model {
         $password = $this->clean($password);
 
         if(!$this->check_length($login, 2, 30)) {
-            $err[1] = 'Длина вашего логина не может быть меньше 2 или более 30 символов';
+            $err[1] = 'Длина вашего логина не может быть менее 2 и более 30 символов';
         };
 
         if(!$this->check_length($password, 8, 30)) {
-            $err[2] = "Длина вашего пароля не может быть меньше 8 или более 30 символов";
+            $err[2] = "Длина вашего пароля не может быть менее 8 и более 30 символов";
         }
 
         if (sizeof($err) == 0) {
@@ -103,7 +93,6 @@ class Model_users extends Model {
 
         $stmt = Model::$connect->prepare("SELECT * FROM `users` WHERE `login` = ?");
         $stmt->execute(array($login));
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);;
 
         $stmt = Model::$connect->prepare("SELECT `id_user` FROM `users` WHERE `login` LIKE ?");
         $stmt->execute(array($login));

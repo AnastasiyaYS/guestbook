@@ -3,16 +3,11 @@
     <!-- <img data-src="holder.js/300x200" alt="аватар"> -->
     <div class="caption">
         <div class="user">
-            <span class="leftstr"><strong>Татьяна Ларина</strong></span>
-            <span class="rightstr">18.11.2017 19:19</span>
+            <span class="leftstr"><strong><?php echo Model::get_username($id_auth); ?></strong></span>
+            <span class="rightstr"><?php echo $timestamp ?></span>
         </div>
         <div class="message">
-            Я к вам пишу - чего же боле? Что я могу еще сказать? Теперь, я знаю, в вашей воле Меня презреньем наказать.
-            Но вы, к моей несчастной доле Хоть каплю жалости храня, Вы не оставите меня. Сначала я молчать хотела;
-            Поверьте: моего стыда Вы не узнали б никогда, Когда б надежду я имела Хоть редко, хоть в неделю раз
-            В деревне нашей видеть вас, Чтоб только слышать ваши речи, Вам слово молвить, и потом Все думать, думать об одном
-            И день и ночь до новой встречи. Но говорят, вы нелюдим; В глуши, в деревне всё вам скучно, А мы... ничем мы не блестим,
-            Хоть вам и рады простодушно.
+            <?php echo $data1[$i]['message']; ?>
         </div>
         <div class="btncomment">
             <a href="#" class="btn btn-primary invisible2" role="button">Комментировать</a>

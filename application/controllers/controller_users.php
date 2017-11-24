@@ -7,7 +7,7 @@ class Controller_users extends Controller
     }
 
     function action_index() {
-       $this->action_auth();
+        $this->action_auth();
     }
 
     function action_auth() {

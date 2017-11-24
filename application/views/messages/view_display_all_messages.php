@@ -16,21 +16,16 @@
             </form>
         </div>
         <!-- Кнопка для написания нового сообщения, открывающая форму -->
-        <div class="">
-            <form method="post" action="" class="btnNewMessage">
-                <button type="submit" class="btn btn-primary optionsBtnNewMessage" name='newMessage'>Написать новое сообщение</button>
-            </form>
-            <?php
-                if(isset($_POST['newMessage'])){
-                    include 'view_write_message.php';
-                }
-            ?>
-        </div>
+        <?php
+            include 'view_button_to_write_message.php';
+        ?>
         <!-- Подключаем файл, выводящий одно сообщение -->
         <?php
-            include 'view_show_message.php';
-            include 'view_show_message.php';
-            include 'view_show_message.php';
+            for ($i=0, $num_lines=count($data1); $i<$num_lines; $i++) {
+                $id_auth=$data1[$i]['id_author'];
+                $timestamp = date('d.m.Y H:i:s', strtotime($data1[$i]['datetimewriting']));
+                include 'view_show_message.php';
+            }
         ?>
         <!-- Пагинация -->
         <div align="center">
