@@ -10,7 +10,7 @@ CREATE TABLE `users` (
   `user_status` enum ('admin', 'user', 'guest') NOT NULL DEFAULT 'guest',
    PRIMARY KEY (`id_user`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-  
+
 CREATE TABLE `messages` (
   `id_msg` int(11) AUTO_INCREMENT,
   `id_author` int(11) NOT NULL,
@@ -21,11 +21,11 @@ CREATE TABLE `messages` (
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
   
 INSERT INTO `users` (`firstname`, `lastname`, `login`, `email`, `password`, `gender`, `user_status`) VALUES
-('Первый', 'Тестович', 'test1', 'test1@mail.ru', '123', 'man', ''),
-('Второй', 'Тестович', 'test2', 'test2@mail.ru', '234', 'woman', ''),
-('Третий', 'Тестович', 'test3', 'test3@mail.ru', '345', '', '');  
+('пїЅпїЅпїЅпїЅпїЅпїЅ', 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'test1', 'test1@mail.ru', '123', 'man', ''),
+('пїЅпїЅпїЅпїЅпїЅпїЅ', 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'test2', 'test2@mail.ru', '234', 'woman', ''),
+('пїЅпїЅпїЅпїЅпїЅпїЅ', 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'test3', 'test3@mail.ru', '345', '', '');  
   
 INSERT INTO `messages` (`id_author`, `datetimewriting`, `message`) VALUES
-('1', now(), 'Я первое сообщение'),
-('2', now(), 'Я второе сообщение'),
-('3', now(), 'Я третье сообщение');
+('1', now(), 'пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'),
+('2', now(), 'пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'),
+('3', now(), 'пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');

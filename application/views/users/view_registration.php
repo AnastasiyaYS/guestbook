@@ -56,13 +56,13 @@
             <div class="col-sm-4">
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="man" <?php if($data2[5]=="man"){print "checked";} if(empty($_POST["optionsRadios"])){print "checked";} ?> >
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="мужской" <?php if($data2[5]=="мужской"){print "checked";} if(empty($_POST["optionsRadios"])){print "checked";} ?> >
                         Мужской
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="woman" <?php $data2[5]=="woman" ? print "checked" : false;?> >
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="женский" <?php $data2[5]=="женский" ? print "checked" : false;?> >
                         Женский
                     </label>
                 </div>

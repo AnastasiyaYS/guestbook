@@ -54,11 +54,6 @@ class Model_users extends Model {
                 Session::init();
                 Session::set('loggedIn', true);
                 Session::set('user', $user);
-
-                echo '<pre>';
-                var_dump($_SESSION);
-                echo '</pre>';
-
             } else {
                 $err[3] = "Неверный логин или пароль!";
             }
