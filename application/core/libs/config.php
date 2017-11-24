@@ -7,8 +7,6 @@ class DB {
     protected $charset = 'utf8';
 
     protected $salt = 'j4S(p@q:mI+0uc?$5.1%87';
-
-
 }
 
 

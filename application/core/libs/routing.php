@@ -1,4 +1,4 @@
-<?
+<?php
 class Routing
 {
     static function execute()

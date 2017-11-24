@@ -3,7 +3,7 @@
         <strong>Авторизация</strong>
     </div>
     <!-- Форма авторизации -->
-    <form class="form-horizontal" method="post" action="">
+    <form class="form-horizontal" method="post" action="/users/auth">
         <br><br>
         <div class="form-group">
             <span id="helpBlock" class="error help-block input-sm <?php if (!$data1[3]) {echo 'invisible';} ?>"><?php echo "$data1[3]" ?></span>

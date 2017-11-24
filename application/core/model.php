@@ -5,8 +5,6 @@ class Model extends DB
 
     public function __construct()
     {
-        session_start();
-        
         if (!isset(self::$connect)) {
             $dsn = "mysql: host=$this->host; dbname=$this->db; charset=$this->charset";
             $opt = [
@@ -17,7 +15,6 @@ class Model extends DB
             self::$connect = new PDO($dsn, $this->user, $this->pass, $opt);
         }
         return self::$connect;
-
     }
 
     public function clean($value = "") {

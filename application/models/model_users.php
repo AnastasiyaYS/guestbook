@@ -7,7 +7,7 @@ class Model_users extends Model {
     public function test($userpassword){
 
         $stmt = Model::$connect->query('SELECT `firstname` FROM `users`');
-        while ($row = $stmt->fetch())
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC));
         {
             echo $row['firstname'] . "\n";
         }
@@ -44,12 +44,21 @@ class Model_users extends Model {
         }
 
         if (sizeof($err) == 0) {
+
             $stmt = Model::$connect->prepare("SELECT * FROM `users` WHERE `login` = ?");
             $stmt->execute(array($login));
-            $user = $stmt->fetchAll();
 
-            if (!is_null($user) && password_verify($password . $this->salt, $user[0]['password'])) {
-                $_SESSION['user'] = $user;
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!is_null($user) && password_verify($password . $this->salt, $user['password'])) {
+                Session::init();
+                Session::set('loggedIn', true);
+                Session::set('user', $user);
+
+                echo '<pre>';
+                var_dump($_SESSION);
+                echo '</pre>';
+
             } else {
                 $err[3] = "Неверный логин или пароль!";
             }
@@ -99,11 +108,11 @@ class Model_users extends Model {
 
         $stmt = Model::$connect->prepare("SELECT * FROM `users` WHERE `login` = ?");
         $stmt->execute(array($login));
-        $user = $stmt->fetchAll();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);;
 
         $stmt = Model::$connect->prepare("SELECT `id_user` FROM `users` WHERE `login` LIKE ?");
         $stmt->execute(array($login));
-        $stmt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!empty($stmt)) {
             $err[4] = "Этот логин уже занят. Выберите другой";
         }

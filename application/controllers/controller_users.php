@@ -23,6 +23,13 @@ class Controller_users extends Controller
         }
     }
 
+    function action_logOut() {
+        Session::init();
+        Session::destroy();
+        header('Location: /users/auth');
+        exit();
+    }
+
     function action_reg() {
         if(!empty($_POST["reg"])) {
             $data1 = $this->model->registration($_POST['firstname'], $_POST['lastname'], $_POST['login'],
@@ -38,5 +45,6 @@ class Controller_users extends Controller
             $this->view->generate('view_registration.php');
         }
     }
+
 
 }
