@@ -22,7 +22,6 @@
         <!-- Подключаем файл, выводящий одно сообщение -->
         <?php
             for ($i=0, $num_lines=count($data1); $i<$num_lines; $i++) {
-                $id_auth=$data1[$i]['id_author'];
                 $timestamp = date('d.m.Y H:i:s', strtotime($data1[$i]['datetimewriting']));
                 include 'view_show_message.php';
             }

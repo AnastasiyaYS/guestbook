@@ -55,8 +55,8 @@ h2 {
 }
 
 .container .jumbotron, .container-fluid .jumbotron {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .jumbotron {
@@ -102,7 +102,7 @@ a {
 .thumbnail {
     border-radius: 0;
     margin-bottom: 0;
-    border: 1px solid #ddd;
+    border: 1px solid #e4e4f3;
     background: #fff;
 }
 
@@ -199,7 +199,7 @@ footer {
 
 .error {
     text-align: center;
-    margin-bottom: 10;
+    margin-bottom: -15px;
     color: #9e2626;
 }
 

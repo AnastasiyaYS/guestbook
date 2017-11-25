@@ -31,28 +31,17 @@ class Model extends DB
         return !$result;
     }
 
-    public static function get_username($id_auth){
+    /*public static function get_username($id_user){
         $stmt = Model::$connect->prepare("SELECT `firstname`, `lastname` FROM `users` WHERE `id_user` = ?");
-        $stmt->execute(array($id_auth));
+        $stmt->execute(array($id_user));
 
         $username = $stmt->fetch(PDO::FETCH_ASSOC);
         $username = $username['firstname']." ".$username['lastname'];
 
         return $username;
-    }
+    }   */
 
-    // получить запись по id (и имя таблицы?)
-    /* function getRowById($id){
-        try{
-            $db = $this->db;
-            $stmt = $db->query("SELECT * from $this->table WHERE id = $id");
-            $row = $stmt->fetch();
-        }catch(PDOException $e) {
-            echo $e->getMessage();
-            exit;
-        }
-        return $row; */
-
+    // получить запись по id
     // получить имя таблицы
     // получить все записи
     // получить одну запись
@@ -64,6 +53,4 @@ class Model extends DB
     // удаление записей из базы данных по условию
     // удаление строки из базы данных
     // обновление записи. Происходит по ID
-
-
 }

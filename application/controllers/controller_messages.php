@@ -10,19 +10,24 @@ class Controller_messages extends Controller
         $this->action_showAll();
     }
 
-    function action_showAll() {
+    function action_showAll()
+    {
         $data = $this->model->showAll();
-        if (sizeof($data) != 0) {
-            $this->view->generate('view_display_all_messages.php', $data);
+        if (empty($_POST["writeMessage"])) {
+            if (sizeof($data) != 0) {
+                $this->view->generate('view_display_all_messages.php', $data);
+            } else {
+                $this->view->generate('view_regret.php');
+            }
         } else {
-            $this->view->generate('view_regret.php');
+            $data1 = $this->model->writeMessage($_POST['username'], $_POST['boxAnonym'], $_POST['utext']);
+            $data2 = $this->model->rememberEnteredValues($_POST['username'], $_POST['boxAnonym'], $_POST['utext']);
+
+            if (sizeof($data) != 0) {
+                $this->view->generate('view_display_all_messages.php', $data, $data1, $data2);
+            } else {
+                $this->view->generate('view_regret.php', $data, $data1, $data2);
+            }
         }
-
     }
-
-    function action_write(){
-
-    }
-
-
 }
