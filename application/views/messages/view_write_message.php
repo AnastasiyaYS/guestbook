@@ -6,7 +6,7 @@
                     <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Имя:</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control inputName" id="inputName" name="username" placeholder="Введите ваше имя и фамилию" value="<?php if(isset($_POST['newMessage']) && (!empty($_SESSION))) {echo Session::get('user','firstname').' '.Session::get('user','lastname');} else {echo "$data3[1]";} ?>">
+                            <input type="text" class="form-control inputName" id="inputName" name="username" placeholder="Введите ваше имя и фамилию" value="<?php echo "$data3[1]"; if(isset($_POST['newMessage']) && (isset($_SESSION))) {echo Session::get('user','firstname').' '.Session::get('user','lastname');} ?>">
                             <span id="helpBlock" class="error help-block input-sm <?php if (!$data2[3]) {echo 'invisible';} ?>"><?php echo "$data2[3]"; ?></span>
                             <span id="helpBlock" class="error help-block input-sm <?php if (!$data2[1]) {echo 'invisible';} ?>"><?php echo "$data2[1]"; ?></span>
                         </div>

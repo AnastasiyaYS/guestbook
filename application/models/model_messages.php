@@ -19,14 +19,14 @@ class Model_messages extends Model {
 
         if(strlen($utext)=="0") {
             $err[0] = 'Заполните поле \'Текст Сообщения\'';
-        }  elseif(!$this->check_length($utext, 1, 200)) {
-                $err[2] = "Текст сообщения должен содержать не более 200 символов";
+        }  elseif(!$this->check_length($utext, 1, 1000)) {
+                $err[2] = "Текст сообщения должен содержать не более 1000 символов";
         }
 
         if (empty($boxAnonym)){
             if(strlen($username)=="0") {
                 $err[3] = 'Заполните поле \'Имя\'';
-            } elseif(!$this->check_length($utext, 2, 60)) {
+            } elseif(!$this->check_length($username, 2, 60)) {
                 $err[1] = "Имя должно содержать не менее 2 и не более 60 символов ";
             }
         }
@@ -51,6 +51,9 @@ class Model_messages extends Model {
             2 => $var2,
             3 => $var3,
         ];
+        if(isset($_POST['newMessage']) && (isset($_SESSION))) {
+            $values[1]='';
+        }
         return $values;
     }
 
