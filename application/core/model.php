@@ -1,5 +1,5 @@
 <?php
-class Model extends DB
+class Model extends Config
 {
     protected static $connect;
 

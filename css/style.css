@@ -66,11 +66,6 @@ h2 {
     background-color: #f0f0f8;
 }
 
-.pagination {
-    margin: 20px 0 0;
-    text-align: center;
-}
-
 .pager li > a, .pager li > span {
     border-radius: 0;
     margin: -10px 0;
@@ -104,11 +99,6 @@ a {
     margin-bottom: 0;
     border: 1px solid #e4e4f3;
     background: #fff;
-}
-
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
-    background-color: #008ab9;
-    border-color: #ddd;
 }
 
 .message {
@@ -229,4 +219,33 @@ footer {
 
 h3, .h3 {
     font-size: 21px;
+}
+
+.pagination2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagNum {
+    color: #008ab9;
+    font-size: 16px;
+    padding: 5px 8px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.pagSide {
+    color: #008ab9;
+    font-size: 11px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.pagActive {
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #286090;
+    padding: 5px 8px;
+    background-color: #3076af;
 }

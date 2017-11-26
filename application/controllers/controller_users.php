@@ -45,6 +45,4 @@ class Controller_users extends Controller
             $this->view->generate('view_registration.php');
         }
     }
-
-
 }

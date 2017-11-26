@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="thumbnail writeMessage">
-                <form class="form-horizontal" role="form" method="post" action="/messages/showAll">
+                <form class="form-horizontal" role="form" method="post" action="/">
                     <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Имя:</label>
                         <div class="col-sm-8">
@@ -32,9 +32,9 @@
                         <input type="hidden" name="writeMessage" value="3">
                     </div>
                     <div class="form-group">
-                        <div class="btnNewMessage">
+                        <div id="update" class="btnNewMessage">
                             <div class="col-md-2"></div>
-                            <button type="submit" class="col-md-4 btn btn-primary optionsBtnNewMessage" name='newMessage'>Отправить сообщение</button>
+                            <div ><button type="submit" class="col-md-4 btn btn-primary optionsBtnNewMessage" name='newMessage'>Отправить сообщение</button>
                             <a class="col-md-4 btn btn-primary optionsBtnNewMessage btnClose" href="/">Закрыть</a>
                         </div>
                     </div>

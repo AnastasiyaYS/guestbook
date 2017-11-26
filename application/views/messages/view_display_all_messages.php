@@ -1,43 +1,45 @@
 <div class="row">
     <div class="col-md-12">
-        <!-- Установка количества сообщений на странице -->
-        <div class="numberPosts">
-            <form class="form-horizontal" role="form">
-                <div class="form-group">
-                    <div class="col-sm-2"></div>
-                    <label for="inputNumberPosts" class="col-sm-4 col-xs-4 control-label">Количество сообщений на странице:</label>
-                    <div class="col-sm-1 col-xs-3">
-                        <input type="text" class="form-control msgOnPage" id="inputNumberPosts" placeholder="10">
-                    </div>
-                    <div class="col-sm-1 col-xs-3">
-                        <button type="submit" class="btn btn-default">Применить</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <!-- Кнопка для написания нового сообщения, открывающая форму -->
         <?php
             include 'view_button_to_write_message.php';
         ?>
-        <!-- Подключаем файл, выводящий одно сообщение -->
+
         <?php
-            for ($i=0, $num_lines=count($data1); $i<$num_lines; $i++) {
-                $timestamp = date('d.m.Y H:i:s', strtotime($data1[$i]['datetimewriting']));
-                include 'view_show_message.php';
+            if (!empty($_GET['page'])) {
+                $page = $_GET['page'];
+                $shift_start = $pagSet['countMesOnPage'] * ($page-1);
+                $shift_end = $shift_start + $pagSet['countMesOnPage'];
+                for ($i=$shift_start; $i<$shift_end; $i++) {
+                    if (array_key_exists($i, $data1)) {
+                        $timestamp = date('d.m.Y H:i:s', strtotime($data1[$i]['datetimewriting']));
+                        include 'view_show_message.php';
+                    }
+                }
+            } else {
+                for ($i=0; $i<$pagSet['countMesOnPage']; $i++) {
+                    if (array_key_exists($i, $data1)) {
+                        $timestamp = date('d.m.Y H:i:s', strtotime($data1[$i]['datetimewriting']));
+                        include 'view_show_message.php';
+                    }
+                }
             }
         ?>
+
         <!-- Пагинация -->
-        <div align="center">
-            <ul class="pagination">
-                <li class="disabled"><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
+        <div class="pagination2">
+            <?php if ($pagSet['active'] != 1) { ?>
+                <a class="pagSide" href="<?=$pagSet['url']?>" title="В начало">&lt;&lt;&lt;</a>
+                <a class="pagSide" href="<?php if ($pagSet['active'] == 2) { ?><?=$pagSet['url']?><?php } else { ?><?=$pagSet['url_page'].($pagSet['active'] - 1)?><?php } ?>" title="Предыдущая страница">&lt;</a>
+            <?php } ?>
+            <?php for ($i = $pagSet['start']; $i <= $pagSet['end']; $i++) { ?>
+                <?php if ($i == $pagSet['active']) { ?><span class="pagActive"><?=$i?></span><?php } else { ?><a class="pagNum" href="<?php if ($i == 1) { ?><?=$pagSet['url']?><?php } else { ?><?=$pagSet['url_page'].$i?><?php } ?>"><?=$i?></a><?php } ?>
+            <?php } ?>
+            <?php if ($pagSet['active'] != $pagSet['count_pages']) { ?>
+                <a class="pagSide" href="<?=$pagSet['url_page'].($pagSet['active'] + 1)?>" title="Следующая страница">&gt;</a>
+                <a class="pagSide" href="<?=$pagSet['url_page'].$pagSet['count_pages']?>" title="В конец">&gt;&gt;&gt;</a>
+            <?php } ?>
         </div>
+
     </div>
 </div>
 
