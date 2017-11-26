@@ -16,7 +16,7 @@ class Controller_users extends Controller
             if (sizeof($data1) == 0) {
                 $this->view->generate('view_profile.php');
             } else {
-                $this->view->generate('view_authorization.php', $data1);
+                $this->view->generate('view_authorization.php', $pagSet = null, $data1);
             }
         } else {
             $this->view->generate('view_authorization.php');
@@ -39,7 +39,7 @@ class Controller_users extends Controller
 
                 $this->view->generate('view_successful_registration.php');
             } else {
-                $this->view->generate('view_registration.php', $data1, $data2);
+                $this->view->generate('view_registration.php', $pagSet = null, $data1, $data2);
             }
         } else {
             $this->view->generate('view_registration.php');
