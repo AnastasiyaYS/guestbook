@@ -87,6 +87,7 @@ class Model_messages extends Model {
             $stmt = Model::$connect->prepare('INSERT INTO `messages` (`id_author`, `sender_name`, `anonymity`, `message`, `datetimewriting`) VALUES (?, ?, ?, ?, now())');
             $stmt->execute(array($id_user, $username, $boxAnonym, $utext));
 
+            $err[4]='Ваше сообщение опубликовано! Чтобы увидеть его нажмите на кнопку "Закрыть" или перезагрузите страницу';
         }
         return $err;
     }

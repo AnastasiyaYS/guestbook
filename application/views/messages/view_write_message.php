@@ -31,6 +31,7 @@
                     <div>
                         <input type="hidden" name="writeMessage" value="3">
                     </div>
+                    <span id="helpBlock" class="noErrors help-block input-sm <?php if (!$data2[4]) {echo 'invisible';} ?>"><?php echo "$data2[4]"; ?></span>
                     <div class="form-group">
                         <div id="update" class="btnNewMessage">
                             <div class="col-md-2"></div>

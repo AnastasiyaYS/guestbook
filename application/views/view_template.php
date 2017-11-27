@@ -34,6 +34,7 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <?php if(Session::get('loggedIn') == true):?>
+                            <li><a href="/users/profile">Профиль</a></li>
                             <li><a href="/users/logOut">Выход</a></li>
                             <?php else: ?>
                             <li><a href="/users">Вход</a></li>

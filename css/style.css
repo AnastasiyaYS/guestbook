@@ -197,6 +197,11 @@ footer {
     color: #9e2626;
 }
 
+.noErrors {
+    text-align: center;
+    color: #269a45;
+}
+
 .successful {
     color: #286090 !important;
     font-weight: bold;

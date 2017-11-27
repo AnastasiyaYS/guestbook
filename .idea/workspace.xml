@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4b8bc59d-83ea-4764-bc04-74245183ccd8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/controller_messages.php" afterPath="$PROJECT_DIR$/application/controllers/controller_messages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/conf/config.php" afterPath="$PROJECT_DIR$/application/core/conf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/controller.php" afterPath="$PROJECT_DIR$/application/core/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/model.php" afterPath="$PROJECT_DIR$/application/core/model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/view.php" afterPath="$PROJECT_DIR$/application/core/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/controller_users.php" afterPath="$PROJECT_DIR$/application/controllers/controller_users.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_messages.php" afterPath="$PROJECT_DIR$/application/models/model_messages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_users.php" afterPath="$PROJECT_DIR$/application/models/model_users.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/messages/view_display_all_messages.php" afterPath="$PROJECT_DIR$/application/views/messages/view_display_all_messages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/messages/view_show_message.php" afterPath="$PROJECT_DIR$/application/views/messages/view_show_message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/messages/view_write_message.php" afterPath="$PROJECT_DIR$/application/views/messages/view_write_message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/users/view_authorization.php" afterPath="$PROJECT_DIR$/application/views/users/view_authorization.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/users/view_registration.php" afterPath="$PROJECT_DIR$/application/views/users/view_registration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/view_template.php" afterPath="$PROJECT_DIR$/application/views/view_template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="guestbook2.iws" />
@@ -37,30 +30,6 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - guestbook@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - guestbook@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="messages" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -71,32 +40,75 @@
       <file leaf-file-name="controller_messages.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/controller_messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="308">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller_users.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controller_users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/controller_users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+            <state relative-caret-position="765">
+              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_messages.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view_display_all_messages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/messages/view_display_all_messages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+              <folding>
+                <marker date="1511810317483" expanded="true" signature="1276:1307" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_button_to_write_message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/messages/view_button_to_write_message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_messages.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/model_messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+            <state relative-caret-position="370">
+              <caret line="89" column="124" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="124" />
               <folding>
-                <marker date="1511762065188" expanded="true" signature="142:254" ph="SELECT * FRO... messages" />
-                <marker date="1511762065188" expanded="true" signature="2767:2888" ph="INSERT INTO `messages`... " />
-                <marker date="1511762065188" expanded="true" signature="3467:3506" ph="DELETE FROM " />
+                <marker date="1511800439491" expanded="true" signature="142:254" ph="SELECT * FRO... messages" />
+                <marker date="1511800439491" expanded="true" signature="2767:2888" ph="INSERT INTO `messages`... " />
+                <marker date="1511800439491" expanded="true" signature="3592:3631" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/model_users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1511761402887" expanded="true" signature="220:285" ph="INSERT INTO users... " />
+                <marker date="1511761402887" expanded="true" signature="220:290" ph="INSERT INTO users... " />
+                <marker date="1511761402887" expanded="true" signature="220:291" ph="INSERT INTO users... " />
+                <marker date="1511761402887" expanded="true" signature="220:293" ph="INSERT INTO users... " />
+                <marker date="1511761402887" expanded="true" signature="1078:1115" ph="SELECT * FRO... users" />
+                <marker date="1511761402887" expanded="true" signature="1078:1116" ph="SELECT * FRO... users" />
+                <marker date="1511761402887" expanded="true" signature="1078:1117" ph="SELECT * FRO... users" />
+                <marker date="1511761402887" expanded="true" signature="2656:2695" ph="SELECT * FRO... users" />
+                <marker date="1511761402887" expanded="true" signature="2781:2831" ph="SELECT `id_u... users" />
+                <marker date="1511761402887" expanded="true" signature="3539:3692" ph="INSERT INTO `users`... " />
               </folding>
             </state>
           </provider>
@@ -105,8 +117,18 @@
       <file leaf-file-name="view_registration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/users/view_registration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="17">
               <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/view_template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -115,31 +137,11 @@
       <file leaf-file-name="view_write_message.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/messages/view_write_message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            <state relative-caret-position="369">
+              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
               <folding>
-                <marker date="1511743929487" expanded="true" signature="1293:1342" ph="..." />
+                <marker date="1511800512469" expanded="true" signature="1293:1342" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/view_template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/load.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,28 +149,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_authorization.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/users/view_authorization.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="73" />
+            <state relative-caret-position="197">
+              <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -211,12 +193,8 @@
         <option value="$PROJECT_DIR$/js/updating_page.js" />
         <option value="$PROJECT_DIR$/application/views/messages/view_regret.php" />
         <option value="$PROJECT_DIR$/application/views/users/view_successful_registration.php" />
-        <option value="$PROJECT_DIR$/application/views/view_template.php" />
-        <option value="$PROJECT_DIR$/application/controllers/controller_users.php" />
-        <option value="$PROJECT_DIR$/application/views/messages/view_write_message.php" />
         <option value="$PROJECT_DIR$/application/views/messages/edit_message.php" />
         <option value="$PROJECT_DIR$/application/views/messages/view_edit_message.php" />
-        <option value="$PROJECT_DIR$/application/views/messages/view_display_all_messages.php" />
         <option value="$PROJECT_DIR$/application/core/conf/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/controller_messages.php" />
         <option value="$PROJECT_DIR$/application/core/controller.php" />
@@ -224,10 +202,14 @@
         <option value="$PROJECT_DIR$/application/core/view.php" />
         <option value="$PROJECT_DIR$/application/models/model_users.php" />
         <option value="$PROJECT_DIR$/application/views/messages/view_show_message.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/application/views/users/view_authorization.php" />
         <option value="$PROJECT_DIR$/application/views/users/view_registration.php" />
         <option value="$PROJECT_DIR$/application/models/model_messages.php" />
+        <option value="$PROJECT_DIR$/application/views/messages/view_write_message.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/application/views/messages/view_display_all_messages.php" />
+        <option value="$PROJECT_DIR$/application/views/view_template.php" />
+        <option value="$PROJECT_DIR$/application/controllers/controller_users.php" />
       </list>
     </option>
   </component>
@@ -285,6 +267,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="guestbooknew" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guestbooknew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guestbooknew" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,7 +457,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../guestbooks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../guestbook" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.26310274" />
@@ -540,7 +536,8 @@
       <workItem from="1511279496222" duration="130289000" />
       <workItem from="1511603731051" duration="591000" />
       <workItem from="1511604365270" duration="70249000" />
-      <workItem from="1511723526376" duration="36748000" />
+      <workItem from="1511723526376" duration="39593000" />
+      <workItem from="1511799508279" duration="3235000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен функционал для формы написания сообщений, авторизованному пользователю автоматически подставляется имя, изменена таблица БД message, (+колонка анонимность, отправитель), обработка вводимых значений, имя можно изменять (если стоит галочка, есть возможность оставить поле пустым), исправлены ошибки">
       <created>1511647857881</created>
@@ -553,16 +550,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="374798000" />
+    <option name="totallyTimeSpent" value="380878000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -659,26 +656,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/images/congratulations.jpg" />
     <entry file="dbDummy://dbtable:/f1f8d402/999d2ddf-46d2-4076-af61-fd4a640d854f/guestbook.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/f1f8d402/999d2ddf-46d2-4076-af61-fd4a640d854f/guestbook.messages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -693,13 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/updating_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -718,14 +708,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/messages/view_edit_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/messages/view_edit_message.php" />
     <entry file="file://$PROJECT_DIR$/application/core/conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -771,43 +754,6 @@
         <state relative-caret-position="136">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
-          <folding>
-            <marker date="1511761402887" expanded="true" signature="220:285" ph="INSERT INTO users... " />
-            <marker date="1511761402887" expanded="true" signature="220:290" ph="INSERT INTO users... " />
-            <marker date="1511761402887" expanded="true" signature="220:291" ph="INSERT INTO users... " />
-            <marker date="1511761402887" expanded="true" signature="220:293" ph="INSERT INTO users... " />
-            <marker date="1511761402887" expanded="true" signature="1078:1115" ph="SELECT * FRO... users" />
-            <marker date="1511761402887" expanded="true" signature="1078:1116" ph="SELECT * FRO... users" />
-            <marker date="1511761402887" expanded="true" signature="1078:1117" ph="SELECT * FRO... users" />
-            <marker date="1511761402887" expanded="true" signature="2656:2695" ph="SELECT * FRO... users" />
-            <marker date="1511761402887" expanded="true" signature="2781:2831" ph="SELECT `id_u... users" />
-            <marker date="1511761402887" expanded="true" signature="3539:3692" ph="INSERT INTO `users`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/messages/view_button_to_write_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/messages/view_display_all_messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <marker date="1511753959303" expanded="true" signature="1224:1255" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,38 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/view_template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/controller_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/controller_messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/users/view_authorization.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -899,33 +813,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/users/view_registration.php">
+    <entry file="file://$PROJECT_DIR$/js/updating_page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1511761402887" expanded="true" signature="220:285" ph="INSERT INTO users... " />
+            <marker date="1511761402887" expanded="true" signature="220:290" ph="INSERT INTO users... " />
+            <marker date="1511761402887" expanded="true" signature="220:291" ph="INSERT INTO users... " />
+            <marker date="1511761402887" expanded="true" signature="220:293" ph="INSERT INTO users... " />
+            <marker date="1511761402887" expanded="true" signature="1078:1115" ph="SELECT * FRO... users" />
+            <marker date="1511761402887" expanded="true" signature="1078:1116" ph="SELECT * FRO... users" />
+            <marker date="1511761402887" expanded="true" signature="1078:1117" ph="SELECT * FRO... users" />
+            <marker date="1511761402887" expanded="true" signature="2656:2695" ph="SELECT * FRO... users" />
+            <marker date="1511761402887" expanded="true" signature="2781:2831" ph="SELECT `id_u... users" />
+            <marker date="1511761402887" expanded="true" signature="3539:3692" ph="INSERT INTO `users`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/controller_messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/messages/view_button_to_write_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/users/view_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
           <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/messages/view_write_message.php">
+    <entry file="file://$PROJECT_DIR$/application/models/model_messages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="370">
+          <caret line="89" column="124" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="124" />
           <folding>
-            <marker date="1511743929487" expanded="true" signature="1293:1342" ph="..." />
+            <marker date="1511800439491" expanded="true" signature="142:254" ph="SELECT * FRO... messages" />
+            <marker date="1511800439491" expanded="true" signature="2767:2888" ph="INSERT INTO `messages`... " />
+            <marker date="1511800439491" expanded="true" signature="3592:3631" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_messages.php">
+    <entry file="file://$PROJECT_DIR$/application/views/messages/view_write_message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+        <state relative-caret-position="369">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
           <folding>
-            <marker date="1511762065188" expanded="true" signature="142:254" ph="SELECT * FRO... messages" />
-            <marker date="1511762065188" expanded="true" signature="2767:2888" ph="INSERT INTO `messages`... " />
-            <marker date="1511762065188" expanded="true" signature="3467:3506" ph="DELETE FROM " />
+            <marker date="1511800512469" expanded="true" signature="1293:1342" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/messages/view_display_all_messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding>
+            <marker date="1511810317483" expanded="true" signature="1276:1307" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/view_template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/controller_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -45,4 +45,9 @@ class Controller_users extends Controller
             $this->view->generate('view_registration.php');
         }
     }
+
+    function action_profile() {
+        Session::init();
+        $this->view->generate('view_profile.php');
+    }
 }

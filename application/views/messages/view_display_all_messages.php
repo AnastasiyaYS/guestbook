@@ -6,6 +6,7 @@
         ?>
         <!-- Вывод серии сообщений по страницам -->
         <?php
+        date_default_timezone_set('Europe/Moscow');
             if (!empty($_GET['page'])) {
                 $page = $_GET['page'];
                 $shift_start = $pagSet['countMesOnPage'] * ($page-1);
