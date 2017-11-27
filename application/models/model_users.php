@@ -1,9 +1,6 @@
 <?php
 class Model_users extends Model {
 
-    /**
-     *
-     */
     public function create_admin(){
         $pass = 'qwe1!QWE'.$this->salt;
         $password = password_hash($pass, PASSWORD_DEFAULT);
@@ -124,5 +121,4 @@ class Model_users extends Model {
 
         return $values;
     }
-
 }

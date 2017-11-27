@@ -4,7 +4,7 @@ class Model_messages extends Model {
     private $messages;
 
     public function showAll() {
-        $stmt = Model::$connect->prepare("SELECT `sender_name`, `anonymity`, `datetimewriting`, `message` FROM `messages` ORDER BY `id_msg` DESC");
+        $stmt = Model::$connect->prepare("SELECT `id_msg`, `sender_name`, `anonymity`, `datetimewriting`, `message` FROM `messages` ORDER BY `id_msg` DESC");
         $stmt->execute();
         $this->messages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -16,11 +16,12 @@ class Model_messages extends Model {
     public function paginationSettings(){
         $numbMessages = count($this->messages);
         $count_pages = ceil($numbMessages/$this->countMesOnPage);
+
         if (!empty($_GET['page'])) {
             $active = $_GET['page'];
         }   else $active = 1;
 
-        if (ceil($numbMessages/$this->countMesOnPage)>3) {
+        if ((ceil($numbMessages/$this->countMesOnPage))>=3) {
             $count_show_pages = 3;
         } else {
             $count_show_pages = ceil($numbMessages/$this->countMesOnPage);
@@ -40,17 +41,20 @@ class Model_messages extends Model {
                 $end = $count_pages;
                 if ($start < 1) $start = 1;
             }
-
-            return $paginationSettings = [
-                'count_pages' => $count_pages,
-                'active' => $active,
-                'start' => $start,
-                'end' => $end,
-                'url' => $url,
-                'url_page' => $url_page,
-                'countMesOnPage' => $this->countMesOnPage
-            ];
+        }   else {
+            $start = 1;
+            $end = 1;
         }
+
+        return $paginationSettings = [
+            'count_pages' => $count_pages,
+            'active' => $active,
+            'start' => $start,
+            'end' => $end,
+            'url' => $url,
+            'url_page' => $url_page,
+            'countMesOnPage' => $this->countMesOnPage
+        ];
     }
 
     public function writeMessage($username, $boxAnonym, $utext) {
@@ -67,7 +71,7 @@ class Model_messages extends Model {
 
         if (empty($boxAnonym)){
             if(strlen($username)=="0") {
-                $err[3] = 'Заполните поле \'Имя\'';
+                $err[3] = 'Заполните поле \'Имя\' или опубликуйтесь анонимно';
             } elseif(!$this->check_length($username, 2, 60)) {
                 $err[1] = "Имя должно содержать не менее 2 и не более 60 символов ";
             }
@@ -99,4 +103,12 @@ class Model_messages extends Model {
         return $values;
     }
 
+    public function deleteMessage() {
+        if(!empty($_POST["delete"])) {
+            $id = $_POST["delete"];
+
+            $stmt = Model::$connect->prepare('DELETE FROM `messages` WHERE `id_msg`=?');
+            $stmt->execute(array($id));
+        }
+    }
 }

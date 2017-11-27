@@ -6,7 +6,7 @@
     <form class="form-horizontal" method="post" action="">
         <br><br>
         <div class="form-group">
-            <span id="helpBlock" class="error help-block input-sm <?php if (!$data1[0]) {echo 'invisible';} ?>"><?php echo "$data1[0]" ?></span>
+            <span id="helpBlock" class="error help-block input-sm authreg <?php if (!$data1[0]) {echo 'invisible';} ?>"><?php echo "$data1[0]" ?></span>
             <label for="inputFirstName" class="col-sm-2 col-sm-offset-3 control-label">Имя:</label>
             <div class="col-sm-4">
                 <input type="text" class="form-control" id="inputFirstName" name="firstname" placeholder="Имя" value=<?php echo "$data2[1]" ?> >
@@ -67,18 +67,6 @@
                 </div>
             </div>
         </div>
-
-        <!--
-        <div class="form-group">
-            <div class="col-sm-offset-5 col-sm-10">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Запомнить меня
-                    </label>
-                </div>
-            </div>
-        </div>
-        -->
         <div>
             <input type="hidden" name="reg" value="1">
         </div>

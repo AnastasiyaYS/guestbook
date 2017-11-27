@@ -13,9 +13,8 @@ class Controller_messages extends Controller
     function action_showAll()
     {
         $data = $this->model->showAll();
-
         $paginationSettings = $this->model->paginationSettings();
-
+        $this->model->deleteMessage();
         if (empty($_POST["writeMessage"])) {
             if (sizeof($data) != 0) {
                 $this->view->generate('view_display_all_messages.php', $paginationSettings, $data);
@@ -28,7 +27,7 @@ class Controller_messages extends Controller
             if (sizeof($data) != 0) {
                 $this->view->generate('view_display_all_messages.php', $paginationSettings, $data, $data1, $data2);
             } else {
-                $this->view->generate('view_regret.php', $data, $data1, $data2);
+                $this->view->generate('view_regret.php', $paginationSettings=null, $data, $data1, $data2);
             }
         }
     }

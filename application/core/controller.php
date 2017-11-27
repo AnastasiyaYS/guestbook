@@ -12,14 +12,4 @@ class Controller {
         /* $modelName = 'Model_' . Controller::$nameFolderViews;
         $this->model = new $modelName(); */
     }
-
-    /*
-     * Action по умолчанию
-     * $id int июентифитора
-     * return string
-     */
-    function action_index()
-    {
-
-    }
 }

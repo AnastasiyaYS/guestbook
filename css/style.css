@@ -249,3 +249,12 @@ h3, .h3 {
     padding: 5px 8px;
     background-color: #3076af;
 }
+
+.btnadmin {
+    margin-top: 6px;
+    background-color: #008ab9;
+}
+
+.authreg {
+    margin-bottom: 5px !important;
+}

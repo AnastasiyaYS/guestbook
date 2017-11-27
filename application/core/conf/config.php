@@ -8,7 +8,7 @@ class Config {
 
     protected $salt = 'j4S(p@q:mI+0uc?$5.1%87';
 
-    protected $countMesOnPage = 10;
+    protected $countMesOnPage = 5;
 }
 
 

@@ -1,6 +1,5 @@
 <!-- Вывод сообщения -->
 <div class="thumbnail">
-    <!-- <img data-src="holder.js/300x200" alt="аватар"> -->
     <div class="caption">
         <div class="user">
             <span class="leftstr"><strong><?php if (!empty($data1[$i]['anonymity'])) {echo $data1[$i]['anonymity'];} else { echo $data1[$i]['sender_name']; } ?></strong></span>
@@ -10,7 +9,12 @@
             <?php echo $data1[$i]['message']; ?>
         </div>
         <div class="btncomment">
-            <a href="#" class="btn btn-primary invisible2" role="button">Комментировать</a>
+            <form method="post" action="" class="<?php if (Session::get('user','user_status')!='admin') {echo 'invisible';} ?>">
+                <div>
+                    <input type="hidden" name="delete" value="<?=$data1[$i]['id_msg'] ?>">
+                </div>
+                <button type="submit" class="btn btn-primary btnadmin" name="del">Удалить</button>
+            </form>
         </div>
     </div>
 </div>

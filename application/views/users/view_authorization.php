@@ -6,7 +6,7 @@
     <form class="form-horizontal" method="post" action="/users/auth">
         <br><br>
         <div class="form-group">
-            <span id="helpBlock" class="error help-block input-sm <?php if (!$data1[3]) {echo 'invisible';} ?>"><?php echo "$data1[3]" ?></span>
+            <span id="helpBlock" class="error help-block input-sm authreg <?php if (!$data1[3]) {echo 'invisible';} ?>"><?php echo "$data1[3]" ?></span>
             <label for="inputLogin" class="col-sm-2 col-sm-offset-3 control-label">Логин:</label>
             <div class="col-sm-4">
                 <input type="text" class="form-control" id="inputLogin" name="login" placeholder="Логин">

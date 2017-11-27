@@ -1,9 +1,10 @@
 <div class="row">
     <div class="col-md-12">
+        <!-- Подключение кнопки для вывода формы написания сообщения -->
         <?php
             include 'view_button_to_write_message.php';
         ?>
-
+        <!-- Вывод серии сообщений по страницам -->
         <?php
             if (!empty($_GET['page'])) {
                 $page = $_GET['page'];
@@ -24,7 +25,6 @@
                 }
             }
         ?>
-
         <!-- Пагинация -->
         <div class="pagination2">
             <?php if ($pagSet['active'] != 1) { ?>
@@ -42,5 +42,3 @@
 
     </div>
 </div>
-
-

@@ -22,7 +22,6 @@ class Model extends Config
         $value = stripslashes($value);
         $value = strip_tags($value);
         $value = htmlspecialchars($value);
-
         return $value;
     }
 
@@ -30,27 +29,4 @@ class Model extends Config
         $result = (mb_strlen($value) < $min || mb_strlen($value) > $max);
         return !$result;
     }
-
-    /*public static function get_username($id_user){
-        $stmt = Model::$connect->prepare("SELECT `firstname`, `lastname` FROM `users` WHERE `id_user` = ?");
-        $stmt->execute(array($id_user));
-
-        $username = $stmt->fetch(PDO::FETCH_ASSOC);
-        $username = $username['firstname']." ".$username['lastname'];
-
-        return $username;
-    }   */
-
-    // получить запись по id
-    // получить имя таблицы
-    // получить все записи
-    // получить одну запись
-    // извлечь из базы данных одну запись
-    // получить запись по id
-    // запись в базу данных
-    // составление запроса к базе данных
-    // выполнение запроса к базе данных
-    // удаление записей из базы данных по условию
-    // удаление строки из базы данных
-    // обновление записи. Происходит по ID
 }

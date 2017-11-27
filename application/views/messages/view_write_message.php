@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <div id="update" class="btnNewMessage">
                             <div class="col-md-2"></div>
-                            <div ><button type="submit" class="col-md-4 btn btn-primary optionsBtnNewMessage" name='newMessage'>Отправить сообщение</button>
+                            <button type="submit" class="col-md-4 btn btn-primary optionsBtnNewMessage" name='newMessage'>Отправить сообщение</button>
                             <a class="col-md-4 btn btn-primary optionsBtnNewMessage btnClose" href="/">Закрыть</a>
                         </div>
                     </div>
