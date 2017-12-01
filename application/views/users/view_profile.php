@@ -7,5 +7,5 @@
     <p><strong>E-mail:</strong> <?php echo Session::get('user', 'email'); ?><br></p>
     <p><strong>Пароль:</strong> ••••••••••••• <br></p>
     <p><strong>Пол:</strong> <?php echo Session::get('user', 'gender'); ?><br><br></p>
-    <button type="submit" class="btn btn-primary optionsBtnNewMessage">Редактировать</button>
+    <a class="btn btn-primary optionsBtnNewMessage" href="/users/editProfile">Редактировать</a>
 </div>

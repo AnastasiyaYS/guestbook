@@ -121,4 +121,79 @@ class Model_users extends Model {
 
         return $values;
     }
+
+    public function editProfile($firstname, $lastname, $email, $old_password, $new_password, $confirm_new_password, $gender) {
+        $err = [];
+
+        $firstname = $this->clean($firstname);
+        $lastname = $this->clean($lastname);
+        $email = $this->clean($email);
+        $password = $this->clean($password);
+        $confirm_password = $this->clean($confirm_password);
+        $confirm_new_password = $this->clean($confirm_new_password);
+
+        if(empty($firstname) || empty($lastname) || empty($email) || empty($old_password) || empty($new_password) || empty($confirm_new_password)) {
+            $err[0] = "Заполните пустые поля!";
+        }
+
+        if(!$this->check_length($firstname, 2, 30)) {
+            $err[1] = "Имя должно содержать не менее 2 и не более 30 символов";
+        };
+
+        if(!$this->check_length($lastname, 2, 30)) {
+            $err[2] = "Фамилия должна содержать не менее 2 и не более 30 символов";
+        };;
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $err[5] = "Неверный формат email";
+        }
+
+        if(!$this->check_length($new_password, 8, 30)) {
+            $err[6] = "Пароль должен содержать не менее 8 и не более 30 символов";
+        }
+
+
+        Session::init();
+        if (!password_verify($old_password.$this->salt, Session::get('user', 'password'))) {
+            $err[7] = "Не верный старый пароль!" ;
+        }
+
+        if (sizeof($err) == 0) {
+
+            if ($new_password == $confirm_new_password) {
+                $pass = $new_password . $this->salt;
+                $new_password = password_hash($pass, PASSWORD_DEFAULT);
+
+                $login = Session::get('user', 'login');
+
+                $stmt = Model::$connect->prepare("UPDATE `users` SET `firstname`=?, `lastname`=?, `email`=?,
+                        `password`=?, `gender`=? WHERE `login`=? ");
+                $stmt->execute(array($firstname, $lastname, $email, $new_password, $gender, $login));
+
+                $stmt = Model::$connect->prepare("SELECT * FROM `users` WHERE `login` = ?");
+                $stmt->execute(array($login));
+
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                Session::set('user', $user);
+
+            } else {
+                $err[8] = "Пароли не совпадают";
+            }
+
+        }
+
+        return $err;
+
+    }
+
+    public function rememberChangedValues ($var1, $var2, $var3, $var4){
+        $values = [
+            1 => $var1,
+            2 => $var2,
+            3 => $var3,
+            4 => $var4,
+        ];
+
+        return $values;
+    }
 }

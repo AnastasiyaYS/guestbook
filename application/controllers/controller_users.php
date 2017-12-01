@@ -50,4 +50,19 @@ class Controller_users extends Controller
         Session::init();
         $this->view->generate('view_profile.php');
     }
+
+    function action_editProfile() {
+        Session::init();
+        if (!empty($_POST["edit"])) {
+            $data1 = $this->model->editProfile($_POST['firstname2'], $_POST['lastname2'], $_POST['email2'], $_POST['old_password'], $_POST['new_password'],$_POST['confirm_new_password'], $_POST['optionsRadios2']);
+            $data2 = $this->model->rememberChangedValues($_POST['firstname2'], $_POST['lastname2'], $_POST['email2'], $_POST['optionsRadios2']);
+
+            if (sizeof($data1) == 0) {
+                $this->view->generate('view_profile.php');
+            }
+            else {
+                $this->view->generate('view_editProfile.php', $pagSet = null, $data1, $data2);
+            }
+        } else $this->view->generate('view_editProfile.php');
+    }
 }
